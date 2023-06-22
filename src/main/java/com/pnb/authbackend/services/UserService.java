@@ -2,6 +2,7 @@ package com.pnb.authbackend.services;
 
 import com.pnb.authbackend.models.ApplicationUser;
 import com.pnb.authbackend.models.Role;
+import com.pnb.authbackend.models.dto.UserRegistrationRequestDTO;
 import com.pnb.authbackend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -31,5 +32,4 @@ public class UserService implements UserDetailsService {
         return user.orElseThrow(() -> new UsernameNotFoundException("User not found!"));
 
     }
-
 }
